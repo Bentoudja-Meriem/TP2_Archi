@@ -3,7 +3,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DBConnection {
-
+  // ajout de patron singleton 
 
 	    private static DBConnection instance ;
 		
