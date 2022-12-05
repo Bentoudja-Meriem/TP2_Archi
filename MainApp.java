@@ -20,6 +20,8 @@ public class MainApp {
 	UniversiteRepository uni=new UniversiteRepository(new Universite(0, null, null));
 	EtudiantRepository er=new EtudiantRepository(new Etudiant(0, null, null, null, null, 0));
 	// is not visible EtudiantRepository ep=new EtudiantRepository(new DBConnection());
+	IJournal jou=new MsgDirect();
+	jou.outPut_Msg("hi tous le monde !");
 	
 
 
