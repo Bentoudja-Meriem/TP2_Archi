@@ -8,7 +8,7 @@ public class EtudiantService {
 
 	
 	
-	boolean inscription (int matricule, String nom, String prénom, String email,String pwd, int id_universite) throws SQLException	
+	boolean inscription (int matricule, String nom, String prénom, Email email,String pwd, int id_universite) throws SQLException	
 	{
 		// EtudiantRepository StudRep= new EtudiantRepository();
 		private EtudiantRepository StudRep;
@@ -27,10 +27,11 @@ public class EtudiantService {
 	    
 	    journal.outPut_Msg("Log: d�but de l'op�ration d'ajout de l'�tudiant avec matricule "+matricule);
 	    
-	    if(email == null || email.length() == 0)
+	   /*  if(email == null || email.length() == 0)
 	    {
 	    	return false;
-	    }
+	    }*/
+		 return email.verifieremail(email);
 	    
 	    if (StudRep.Exists(matricule))
 	    {
