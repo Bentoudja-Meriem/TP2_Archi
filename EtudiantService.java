@@ -52,8 +52,18 @@ public class EtudiantService {
 	     else if (univ.getPack() == TypePackage.Premium)
 	     {
 	    	 stud.setNbLivreMensuel_Autorise(10*2);
-	     }                           
-	     
+	     }         
+		 
+		  void ajouterbonus(int bonus){
+		 if (univ.getPack() == TypePackage.Standard)
+	     {
+	          stud.setNbLivreMensuel_Autorise(5+bonus);
+	     }
+	     else if (univ.getPack() == TypePackage.Premium)
+	     {
+	    	 stud.setNbLivreMensuel_Autorise(5*2+bonus);
+	     }    
+	     }
 		 StudRep.add(stud);
 		 journal.outPut_Msg("Log: Fin de l'op�ration d'ajout de l'�tudiant avec matricule "+matricule);
 		 return true;
