@@ -3,7 +3,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
-public class EtudiantService {
+public class EtudiantService extends livre{
 	IJournal journal;
 
 	
@@ -45,7 +45,7 @@ public class EtudiantService {
 		
 		
 		
-		 if (univ.getPack() == TypePackage.Standard)
+		 /*if (univ.getPack() == TypePackage.Standard)
 	     {
 	          stud.setNbLivreMensuel_Autorise(10);
 	     }
@@ -63,7 +63,7 @@ public class EtudiantService {
 	     {
 	    	 stud.setNbLivreMensuel_Autorise(5*2+bonus);
 	     }    
-	     }
+	     }*/ 
 		 StudRep.add(stud);
 		 journal.outPut_Msg("Log: Fin de l'op�ration d'ajout de l'�tudiant avec matricule "+matricule);
 		 return true;
